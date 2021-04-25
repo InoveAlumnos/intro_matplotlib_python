@@ -29,10 +29,41 @@ def line_plot():
     fig.suptitle('Población histórica mundial', fontsize=16)
     ax = fig.add_subplot()
 
-    ax.plot(years, poblacion, c='darkgreen')
+    ax.plot(years, poblacion, c='darkgreen', label='poblacion')
     ax.legend()
     ax.grid()
     plt.show()
+    print("Fin line plot")
+
+
+def multi_line_plot():
+    mes = [3, 4, 5, 6]
+    gasto_carne = [1650, 2600, 3100, 4000]
+    gasto_verdura = [2500, 2200, 1800, 600]
+
+    # Calcular el gasto total como la suma
+    # de las listas gasto_carne y gasto_verdura
+    gasto_total = []
+    for i in range(len(gasto_carne)):
+        total = gasto_carne[i] + gasto_verdura[i]
+        gasto_total.append(total)
+
+    # Realizaremos un gráfico "plot" con:
+    # mes como "x"
+    # gasto_carne como "y1"
+    # gasto_cargasto_verdurane como "y2"
+    # gasto_total como "y3"
+    fig = plt.figure()
+    fig.suptitle('Gastos mensuales', fontsize=16)
+    ax = fig.add_subplot()
+
+    ax.plot(mes, gasto_carne, label='carne')
+    ax.plot(mes, gasto_verdura, label='verdura')
+    ax.plot(mes, gasto_total, label='total')
+    ax.legend()
+    ax.grid()
+    plt.show()
+    print("Fin multi line plot")
 
 
 def scatter_plot():
@@ -49,8 +80,8 @@ def scatter_plot():
 
     fig = plt.figure()
     fig.suptitle('Población histórica mundial', fontsize=16)
-    ax1 = fig.add_subplot(1, 2, 1)
-    ax2 = fig.add_subplot(1, 2, 2)
+    ax1 = fig.add_subplot(1, 2, 1)  # 1 fila, 2 columnas, axes nº1
+    ax2 = fig.add_subplot(1, 2, 2)  # 1 fila, 2 columnas, axes nº2
 
     # Como los datos no están ordenados por año
     # el plot no funcionará bien en este caso
@@ -62,6 +93,7 @@ def scatter_plot():
     ax2.legend()
     ax2.grid()
     plt.show()
+    print("Fin scatter plot")
 
 
 def bar_plot():
@@ -81,16 +113,19 @@ def bar_plot():
                 poblacion.append(int(line['poblacion']))
 
     fig = plt.figure()
-    fig.suptitle('Población histórica mundial', fontsize=16)
+    fig.suptitle('Población histórica mundial', fontsize=16, label='poblacion')
     ax = fig.add_subplot()
 
     ax.bar(years, poblacion)
     ax.legend()
     ax.grid()
     plt.show()
+    print("Fin bar plot")
+
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     line_plot()
+    multi_line_plot()
     scatter_plot()
     bar_plot()
