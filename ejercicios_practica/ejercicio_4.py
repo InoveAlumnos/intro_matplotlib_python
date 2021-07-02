@@ -35,8 +35,8 @@ if __name__ == '__main__':
     y3 = x**4
     y4 = np.sqrt(x)
 
-    # Esos tres gráficos deben estar colocados
-    # en la diposición de 3 filas y 1 columna:
+    # Esos cuatro gráficos deben estar colocados
+    # en la diposición de 2 filas y 2 columna:
     # ------
     #  graf1 | graf2
     # ------
