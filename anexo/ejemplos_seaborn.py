@@ -16,9 +16,7 @@ __version__ = "1.1"
 
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.axes
 import matplotlib.gridspec as gridspec
-import mplcursors  # [Opcional cursores]
 import seaborn as sns
 
 # Defino el estilo para todos los gráficos
@@ -35,13 +33,13 @@ def line_plot():
 
     x = np.linspace(0, 4*np.pi, 100)
 
-    sns.lineplot(x, np.sin(x), color='darkgreen', label='y=sin(x)', ax=ax1)
+    sns.lineplot(x=x, y=np.sin(x), color='darkgreen', label='y=sin(x)', ax=ax1)
     ax1.legend()
 
-    sns.lineplot(x, np.sin(2*x), color='darkblue', label='y=sin(2*x)', ax=ax2)
+    sns.lineplot(x=x, y=np.sin(2*x), color='darkblue', label='y=sin(2*x)', ax=ax2)
     ax2.legend()
 
-    sns.lineplot(x, np.sin(2*x) + np.sin(x), color='gold',
+    sns.lineplot(x=x, y=np.sin(2*x) + np.sin(x), color='gold',
                  label='y=sin(2*x) + sin(x)', ax=ax3
                  )
     ax3.legend()
@@ -61,8 +59,8 @@ def scatter_plot():
     ax1 = fig.add_subplot(1, 2, 1)
     ax2 = fig.add_subplot(1, 2, 2)
 
-    sns.lineplot(x, y, color='darkcyan', ax=ax1)
-    sns.scatterplot(x, y, color='darkcyan', ax=ax2)
+    sns.lineplot(x=x, y=y, color='darkcyan', ax=ax1)
+    sns.scatterplot(x=x, y=y, color='darkcyan', ax=ax2)
     plt.show(block=False)
 
     np.random.shuffle(x)
@@ -73,8 +71,8 @@ def scatter_plot():
     ax1 = fig.add_subplot(1, 2, 1)
     ax2 = fig.add_subplot(1, 2, 2)
 
-    sns.lineplot(x, y, color='darkmagenta', ax=ax1)
-    sns.scatterplot(x, y, color='darkmagenta', ax=ax2)
+    sns.lineplot(x=x, y=y, color='darkmagenta', ax=ax1)
+    sns.scatterplot(x=x, y=y, color='darkmagenta', ax=ax2)
     plt.show()
 
 
@@ -93,18 +91,18 @@ def bar_plot():
     ax2 = fig.add_subplot(3, 1, 2)
     ax3 = fig.add_subplot(3, 1, 3)
 
-    sns.barplot(trimestres, carne, label='carne', ax=ax1)
+    sns.barplot(x=trimestres, y=carne, label='carne', ax=ax1)
     ax1.set_facecolor('whitesmoke')
     ax1.legend()
 
-    sns.barplot(trimestres, fruta, label='fruta', palette="pastel", ax=ax2)
+    sns.barplot(x=trimestres, y=fruta, label='fruta', palette="pastel", ax=ax2)
     ax2.set_facecolor('whitesmoke')
     ax2.legend()
 
-    sns.barplot(trimestres, verdura, label='verdura', palette='husl', ax=ax3)
+    sns.barplot(x=trimestres, y=verdura, label='verdura', palette='husl', ax=ax3)
     ax3.set_facecolor('whitesmoke')
     ax3.legend()
-    plt.show(block=False)
+    plt.show()
 
 
 if __name__ == '__main__':
