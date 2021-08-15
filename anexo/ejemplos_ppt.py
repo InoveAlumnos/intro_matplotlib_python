@@ -173,6 +173,22 @@ def grid():
 
 
 def line_plot():
+    # Generaremos la función y=X^2 (x al cuadrado)
+    x = range(-10, 11, 4)
+    y = []
+    for i in x:
+        y.append(i**2)
+
+    fig = plt.figure()
+    fig.suptitle('Graficar Y=X**2', fontsize=14)
+    ax = fig.add_subplot()
+
+    ax.plot(x, y, c='darkred', marker='*', label='y=x**2')
+    ax.legend()
+    ax.grid()
+    ax.set_facecolor('whitesmoke')
+    plt.show(block=False)
+
     # Demostración de uso de line plot con una sola variable
     # Generaremos la función y=X^2 (x al cuadradro)
     # pero solo graficaremos los valores de "Y" depedientes de "X"
@@ -185,7 +201,7 @@ def line_plot():
     fig.suptitle('Graficar "Y" dependiente de "X"', fontsize=14)
     ax = fig.add_subplot()
 
-    ax.plot(y, c='darkred', marker='^', ms=10, label='y=x**2')
+    ax.plot(x, y, c='darkred', marker='^', ms=10, label='y=x**2')
     ax.legend()
     ax.grid()
     custom_ticks = np.linspace(0, 10, 11, dtype=int)
@@ -263,11 +279,9 @@ def scatter_plot():
 
 def bar_plot():
     # Utilizar el gráfico de barras para comparar el consumo
-    # de productos por trimestre
+    # de fruta por trimestre
     trimestres = ['En-Mar', 'Abr-Jun', 'Jul-Sep', 'Oct-Dic']
-    carne = [20, 23, 30, 26]
     fruta = [25, 23, 16, 21]
-    verdura = [22, 18, 15, 20]
 
     fig = plt.figure()
     fig.suptitle('Gastos Comida', fontsize=16)
