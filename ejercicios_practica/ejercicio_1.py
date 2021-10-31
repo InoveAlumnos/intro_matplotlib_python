@@ -18,11 +18,8 @@ if __name__ == '__main__':
 
     # NOTA: aproveche los ejemplos de "line_plot" de clase
 
-    # Alumnos: Se desea graficar los valores de "x" e "y" en un gráfico de línea
-
-    # Función que se desea graficar:
-    # y = x**2
-
+    # Se desea graficar los valores de "x" e "y" en un gráfico de línea
+    # A continuación los datos ya disponibles de "x" e "y" para que utilice:
     x = list(range(-10, 11, 1))
 
     # Bucle que completa y calcula todos los valores de "y"
@@ -30,10 +27,10 @@ if __name__ == '__main__':
     for i in x:
         y.append(i**2)
 
-    # Crear una "figura" y crear un "ax" con add_subplot
+    # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
 
-    # Colocar la leyenda y el label con el nombre de la función
+    # Alumno: Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
