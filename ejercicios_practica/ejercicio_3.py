@@ -18,15 +18,15 @@ if __name__ == '__main__':
 
     # NOTA: aproveche los ejemplos "scatter_plot" de clase
 
-    # Alumnos: Se desea graficar la función tanh para el siguiente
+    # Se desea graficar la función tanh para el siguiente
     # intervalor de valores de "X"
     x = np.arange(-np.pi, np.pi, 0.1)
 
     # Función y = tanh(x) --> tangente hiperbólica
     y = np.tanh(x)
 
-    # Graficar la función utilizando "scatter"
-    # utilizando "x" e "y"
+    # Alumno: Graficar la función utilizando "scatter"
+    # utilizando "x" e "y" ya disponible
 
     # Colocar la leyenda y el label con el nombre de la función
 
