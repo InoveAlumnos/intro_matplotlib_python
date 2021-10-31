@@ -18,13 +18,13 @@ if __name__ == '__main__':
 
     # NOTA: aproveche los ejemplos "multi_line_plot" de clase
 
-    # Alumno: Se desea graficar varias funciones en un mismmo gráfico (axe)
+    # Se desea graficar varias funciones en un mismmo gráfico (axe)
 
     # Las funciones que se desean implementar y graficar son:
     # y1 = x**2
     # y2 = x**3
 
-    # Su implementación es la siguiente:
+    # Su implementación ya está disponible, es la siguiente:
     x = list(np.linspace(-4, 4, 20))
 
     y1 = []
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     for i in x:
         y2.append(i**3)
 
-    # Realizar un gráfico que representen las dos funciones
+    # Alumno: Realizar un gráfico que representen las dos funciones
     # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
 
     # Se debe colocar en la leyenda la función que representa
