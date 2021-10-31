@@ -18,10 +18,10 @@ if __name__ == '__main__':
 
     # NOTA: aproveche los ejemplos "line_plot" y "scatter_plot" de clase
 
-    # Alumnos: Se desea graficar cuatro funciones en una misma figura
+    # Se desea graficar cuatro funciones en una misma figura
     # en cuatros gráficos (axes) distintos. Para el siguiente
     # intervalor de valores de "X":
-    x = np.linspace(-10, 10, 40)
+    x = np.linspace(0, 10, 40)
 
     # Realizar tres gráficos que representen
     # y1 = x^2 (X al cuadrado)
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     y3 = x**4
     y4 = np.sqrt(x)
 
-    # Esos cuatro gráficos deben estar colocados
+    # Alumnos: Esos cuatro gráficos deben estar colocados
     # en la diposición de 2 filas y 2 columna:
     # ------
     #  graf1 | graf2
