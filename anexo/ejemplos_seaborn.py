@@ -17,6 +17,9 @@ __version__ = "1.1"
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+
+# Para usar seabor, primero tienen que usar:
+# pip3 install seaborn 
 import seaborn as sns
 
 # Defino el estilo para todos los gráficos
