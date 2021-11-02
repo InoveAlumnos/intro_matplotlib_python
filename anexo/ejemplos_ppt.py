@@ -16,8 +16,6 @@ __version__ = "1.1"
 
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.axes
-import matplotlib.gridspec as gridspec
 
 
 def simple_plot():
@@ -187,53 +185,6 @@ def line_plot():
     ax.legend()
     ax.grid()
     ax.set_facecolor('whitesmoke')
-    plt.show(block=False)
-
-    # Demostración de uso de line plot con una sola variable
-    # Generaremos la función y=X^2 (x al cuadradro)
-    # pero solo graficaremos los valores de "Y" depedientes de "X"
-    x = range(-10, 11, 2)
-    y = []
-    for i in x:
-        y.append(i**2)
-
-    fig = plt.figure()
-    fig.suptitle('Graficar "Y" dependiente de "X"', fontsize=14)
-    ax = fig.add_subplot()
-
-    ax.plot(x, y, c='darkred', marker='^', ms=10, label='y=x**2')
-    ax.legend()
-    ax.grid()
-    custom_ticks = np.linspace(0, 10, 11, dtype=int)
-    ax.set_xticks(custom_ticks)
-    ax.set_facecolor('whitesmoke')
-    plt.show()
-
-    # Demostracion de line plot junto con grid layout
-    gs = gridspec.GridSpec(2, 2)     # (row, col)
-    fig = plt.figure()
-    ax1 = fig.add_subplot(gs[0, 0])  # row 0, col 0
-    ax2 = fig.add_subplot(gs[0, 1])  # row 0, col 1
-    ax3 = fig.add_subplot(gs[1, :])  # row 1, toma todas las col
-
-    x = np.linspace(0, 4*np.pi, 100)
-
-    ax1.plot(x, np.sin(x), color='darkgreen', label='y=sin(x)')
-    ax1.set_facecolor('whitesmoke')
-    ax1.legend()
-    ax1.grid('solid')
-
-    ax2.plot(x, np.sin(2*x), color='darkblue', label='y=sin(2*x)')
-    ax2.set_facecolor('whitesmoke')
-    ax2.legend()
-    ax2.grid('solid')
-
-    ax3.plot(x, np.sin(2*x) + np.sin(x), color='gold',
-             label='y=sin(2*x) + sin(x)'
-             )
-    ax3.set_facecolor('whitesmoke')
-    ax3.legend()
-    ax3.grid('solid')
     plt.show()
 
 
@@ -329,10 +280,10 @@ if __name__ == '__main__':
     # ---- Introducción y personalización de gráficos ---- #
     simple_plot()
     multi_plot()
-    marker_color()
+    #marker_color()
     grid()
     # ---------------- Tipos de gráficos ---------------- #
     line_plot()
     scatter_plot()
     bar_plot()
-    pie_plot()
+    #pie_plot()
