@@ -2,8 +2,7 @@ pip3 install -U pip --user
 pip3 install matplotlib
 pip3 install numpy
 pip3 install requests
-pip3 install SQLAlchemy
+pip3 install SQLAlchemy==1.4.44
 pip3 install Flask
-pip3 install Flask-SQLAlchemy
+pip3 install Flask-SQLAlchemy==3.0.3
 pip3 install Flask-Login
-
