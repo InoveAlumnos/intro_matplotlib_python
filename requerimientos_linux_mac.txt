@@ -1,0 +1,9 @@
+python3 -m pip install -U pip --user
+python3 -m pip install matplotlib
+python3 -m pip install numpy
+python3 -m pip install requests
+python3 -m pip install SQLAlchemy==1.4.44
+python3 -m pip install Flask==2.2.3
+python3 -m pip install Flask-SQLAlchemy==3.0.3
+python3 -m pip install Flask-Login
+python3 -m pip install Werkzeug==2.2.2
